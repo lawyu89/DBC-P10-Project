@@ -1,0 +1,23 @@
+
+<div id="parent_container">
+  <% if current_user %>
+    <div class="welcome center">
+    <h1>Welcome <%= current_user.first_name %>!</h1>
+    <h3><a href="/users/<%= current_user.id%>/places">See Your Places List!</a></h3>
+    </div>
+  <% end %>
+  <div class="form_box">
+    <form class="search" action="/places" method ="get">
+      <h2>Enter Your Destination</h2>
+      <input type="text" name="address"/>
+      <select name="distance">
+        <option>0.5 mi</option>
+        <option>1 mi</option>
+        <option>1.5mi</option>
+        <option>2 mi</option>
+        <option>5 mi</option>
+      </select>
+      <input class="submit" type="submit" name="List places!"/>
+    </form>
+  </div>
+</div>

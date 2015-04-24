@@ -1,0 +1,133 @@
+<% if current_user.places.length >0 %>
+  <div class="page_container">
+    <div class="calendar left">
+      <table>
+        <tr class="date" style="display:inherited">
+          <td colspan="2">
+            <p>Enter A Date:</p>
+            <form id="date" action='/change_date' method="post">
+              <input type="date" name="date"/>
+              <input type="submit"/>
+            </form>
+            <h1><%= "#{DateTime.now.month}/#{DateTime.now.day}/#{DateTime.now.year}" %></h1>
+          </td>
+        </tr>
+        <tr class="time" style="display:none">
+          <td colspan="2">
+            <h2 class="plan_to">Plan Trip to:</h2>
+            <form id="time" action='/change_time' method="post">
+              <input type="hidden" name="_method" value="put"/>
+              <p>Start Time</p>
+              <input type="time" name="start_time"/>
+              <p>End Time</p>
+              <input type="time" name="end_time"/>
+              <p></p>
+              <select name="color">
+                <option>red</option>
+                <option>blue</option>
+                <option>orange</option>
+                <option>green</option>
+                <option>grey</option>
+              </select>
+              <input type="submit"/>
+            </form>
+          </td>
+        </tr>
+        <tr>
+
+          <td><p class="table_text">6:00 AM</p></td><td class="event_details 06"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">7:00 AM</p></td><td class="event_details 07"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">8:00 AM</p></td><td class="event_details 08"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">9:00 AM</p></td><td class="event_details 09"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">10:00 AM</p></td><td class="event_details 10"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">11:00 AM</p></td><td class="event_details 11"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">12:00 PM</p></td><td class="event_details 12"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">1:00 PM</p></td><td class="event_details 13"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">2:00 PM</p></td><td class="event_details 14"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">3:00 PM</p></td><td class="event_details 15"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">4:00 PM</p></td><td class="event_details 16"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">5:00 PM</p></td><td class="event_details 17"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">6:00 PM</p></td><td class="event_details 18"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">7:00 PM</p></td><td class="event_details 19"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">8:00 PM</p></td><td class="event_details 20"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">9:00 PM</p></td><td class="event_details 21"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">10:00 PM</p></td><td class="event_details 22"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">11:00 PM</p></td><td class="event_details 23"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">12:00 AM</p></td><td class="event_details 24"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">1:00 AM</p></td><td class="event_details 01"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">2:00 AM</p></td><td class="event_details 02"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">3:00 AM</p></td><td class="event_details 03"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">4:00 AM</p></td><td class="event_details 04"><p class="table_text"></p></td>
+        </tr>
+        <tr>
+          <td><p class="table_text">5:00 AM</p></td><td class="event_details 05"><p class="table_text"></p></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="list_container right center" >
+    <table>
+    <tr>
+      <td>
+        <h2>Add Your Places to Calender</h2>
+      </td>
+    </tr>
+    <% current_user.places.each do |place|%>
+      <tr>
+        <td>
+        <p class="container_text put"><a href="/users/<%=current_user.id%>/places/<%=place.id%>"><%= place.name %></a></p>
+        <p class="container_text delete"><a href="/users/<%=current_user.id%>/places/<%=place.id%>">Remove From List</a</p>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+<% else %>
+  <div class="no_place_message center">
+    <p>You currently have no places saved</p>
+  </div>
+<% end %>

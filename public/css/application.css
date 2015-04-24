@@ -1,0 +1,214 @@
+*{
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+nav {
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+}
+
+nav .brand, nav .brand a {
+  margin-left: 25px;
+  font-size: 18pt;
+  text-decoration: none;
+  color: #444;
+  width: 60%;
+  display: inline-block;
+}
+
+nav ul {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+nav li {
+  margin-right: 25px;
+  display: inline;
+}
+
+nav li a {
+  color: gray;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+form label {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.errors {
+  color: red;
+}
+
+form.quirks {
+  display: inline-block;
+}
+
+.submit {
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+  width: 200px;
+}
+
+#sign-out input {
+  border:none;
+  background:none;
+  font-weight: :bold;
+}
+
+.center {
+  text-align: center
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.clear {
+  clear:both;
+}
+
+
+
+.place {
+  margin: 0 auto;
+  height: 200px;
+  width: 75%;
+  border: 4px solid black;
+  margin-bottom: 30px;
+}
+
+.results {
+  margin-top: 50px;
+}
+
+.img_icon {
+  margin-left: 200px;
+  margin-bottom: 30px;
+}
+
+.info {
+  margin-top: 20px;
+  margin-left: 50px;
+  overflow: auto;
+}
+
+#template form {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 5px;
+}
+
+ul {
+  margin: auto;
+  width: 100%;
+  list-style-type:  none;
+  display: inline-box;
+  max-height: 100%;
+  padding-left: 0;
+}
+
+li {
+  vertical-align: auto;
+  min-width: 46%;
+  max-width: 47%;
+  display: inline-block;
+}
+
+.form {
+  text-align: center;
+}
+
+.no_place_message {
+
+}
+
+.list_container {
+  margin-top: 50px;
+  width: 300px;
+  margin-right: 100px;
+  border: 1px black solid;
+}
+
+div.page_container div.calendar{
+ margin-top: 50px;
+ margin-left: 150px;
+}
+
+td {
+  height: 70px;
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+}
+
+.list_container td {
+  width: 300px;
+}
+
+.event_details {
+  width: 400px;
+}
+
+.container_text {
+  line-height: 0%;
+}
+
+.delete{
+  font-size: 10px;
+}
+
+.form_box{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.place {
+  background: white;
+}
+
+#next_page {
+  text-align: center;
+}
+
+#next_next_page {
+  text-align: center;
+}
+
+.no_place_message{
+  margin-top: 100px;
+}
+
+#parent_container {
+  margin-top: -50px;
+  /*border: 1px black solid;*/
+  background-image: url('/imgs/symphony.png')
+}
+
+.page_container  p{
+  font-size: 20px;
+}
+
+.table_text {
+  font-size: 17px;
+}
